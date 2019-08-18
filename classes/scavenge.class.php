@@ -27,7 +27,7 @@ class scavenge extends vp{
 		$temp=md5(serialize(func_get_args()));
 		$scavenge_time_file=TEMP_DIR.'/time_'.$temp.'.txt';
 		$scavenge_time=(file_exists($scavenge_time_file)) ? (int)file_get_contents($scavenge_time_file) : 0;
-		$scavenge_error_file=TEMP_DIR.'/error_'.$temp.'.txt';
+		$scavenge_error_file=TEMP_DIR.'/error_'.$this->server.'.txt';
 		
 		if(file_exists($scavenge_error_file)){
 			return $this->log->report_to_file('scavenge', "ошибка запуска: $village, $squad_mode");	
