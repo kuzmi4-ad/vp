@@ -1,5 +1,5 @@
-temp/
-reports/
+temp/*
+reports/*
 cgi-bin/
 out.txt
 scavenge_time.txt
